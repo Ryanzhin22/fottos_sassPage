@@ -1,0 +1,288 @@
+// Importa o arquivo com as variáveis 
+@use 'variables'
+@use 'mixins'
+
+// Forma de utilizar as variáveis no SASS
+// h2
+//     color: variables.$secondaryColor
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Josefin Sans'
+    scroll-behavior: smooth
+
+body
+    background-color: variables.$bgColor
+    color: variables.$textColor
+
+    a
+        color: variables.$textColor
+        text-decoration: none
+        transition: .4s
+
+    ul
+        list-style: none
+
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+
+    @include mixins.mobile
+        padding: 1.1rem
+
+    &Brand // .headerBrand
+        color: variables.$primaryColor
+        font-size: 3rem
+
+        &:hover
+            color: variables.$secondaryColor
+
+    &Navbar // .headerNavbar
+
+        ul
+            height: 100%
+            gap: 20px
+            @include mixins.flex-center
+
+            @include mixins.mobile
+                display: none
+
+            li
+                margin: 0 1rem
+                text-transform: uppercase
+                font-size: 16px
+
+                a
+                    &:hover
+                        color: variables.$secondaryColor
+                        font-size: 18px
+
+.gallery
+    @include mixins.flex-center
+    @include mixins.container
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0
+    
+    @include mixins.mobile
+        flex-direction: column
+
+    &Card // galleryCard
+        width: 31%
+        height: 400px
+        margin-bottom: 4%
+        @include mixins.flex-center
+        flex-direction: column
+        color: variables.$primaryColor
+
+        @include mixins.mobile
+            width: 90%
+            margin-bottom: 6%
+
+        &Title
+            font-size: 2rem
+            font-weight: 300
+            margin-bottom: 1rem
+
+        &Btn
+            padding: .6rem 2rem
+            border: 2px solid variables.$primaryColor
+            color: variables.$primaryColor
+            font-weight: 400
+            text-transform: uppercase
+            letter-spacing: 1px
+
+            &:hover
+                background-color: variables.$primaryColor
+                color: variables.$bgColor
+
+    #card-1
+        @include mixins.bgImg('animais.jpg')
+
+    #card-2
+        @include mixins.bgImg('arquitetura.png')
+
+    #card-3
+        @include mixins.bgImg('cidade.jpg')
+        
+    #card-4
+        @include mixins.bgImg('decoracao.webp')
+        
+    #card-5
+        @include mixins.bgImg('esporte.jpg')
+        
+    #card-6
+        @include mixins.bgImg('natureza.webp')
+        
+    #card-7
+        @include mixins.bgImg('paisagem.webp')
+        
+    #card-8
+        @include mixins.bgImg('pessoas.jpg')
+        
+    #card-9
+        @include mixins.bgImg('refeicoes.jpg')
+
+.services
+    @include mixins.container
+    background-size: 100%
+    background-repeat: no-repeat
+    height: 100%
+
+    &Title
+        @include mixins.Title
+
+    &BoxWrapper
+        @include mixins.flex-center
+        margin-top: 5%
+        flex-direction: row
+        gap: 20px
+        flex-wrap: wrap
+
+        .servicesBox
+            background: variables.$cardColor
+            padding: 20px
+            border-radius: 10px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 10px
+            height: 250px
+            width: 380px
+
+            &Number
+                font-size: 40px
+                color: variables.$primaryColor
+
+            &Service
+                font-size: 34px
+                color: variables.$secondaryColor
+
+            &Text
+                font-size: 16px
+                color: #a0a0a0
+
+.about
+    @include mixins.container
+
+    &Title
+        @include mixins.Title
+
+    &Wrapper
+        display: flex
+        gap: 20px
+
+        img
+            width: 500px
+            height: 400px
+            border-radius: 10px
+
+        .aboutUs
+            @include mixins.flex-center
+            flex-direction: column
+            gap: 15px
+            padding: 20px
+
+            &FirstText
+                font-size: 18px
+
+            &SecondText
+                font-weight: bold
+
+            h1
+                color: variables.$primaryColor
+                font-size: 28px
+
+            &Feature
+                margin-top: 20px
+                display: flex
+                justify-content: space-around
+                width: 100%
+
+                &Content
+                    display: flex
+                    flex-direction: column
+                    gap: 10px
+                    width: 40%
+
+                    h2
+                        color: variables.$secondaryColor
+
+                i
+                    color: variables.$secondaryColor
+
+.contact
+    @include mixins.container
+    padding-bottom: 50px
+
+    &Title
+        @include mixins.Title
+
+    &Box
+        display: flex
+        flex-direction: column
+        width: 800px
+        margin: 0 auto
+
+        &Title
+            @include mixins.Title
+            font-size: 28px
+            margin-bottom: 10px
+            color: gray
+
+        &Form
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+
+            &Identification
+                width: 100%
+                display: flex
+                justify-content: space-between
+
+                input
+                    @include mixins.Input
+
+            &Text
+                @include mixins.Input
+                width: 100%
+
+            &SocialMedias
+                display: flex
+                justify-content: center
+                gap: 10px
+                cursor: pointer
+
+                i
+                    transition: .4s
+
+                    &:hover
+                        color: variables.$secondaryColor
+                        transition: .4s
+
+            &Submit
+                padding: 10px 80px
+                border: 2px solid variables.$secondaryColor
+                color: variables.$secondaryColor
+                background-color: transparent
+                border-radius: 10px
+                cursor: pointer
+                font-size: 18px
+                transition: .4s
+
+                &:hover
+                    background-color: variables.$secondaryColor
+                    color: variables.$primaryColor
+                    transition: .4s
+
+footer
+    text-align: center
+    padding-bottom: 2rem
+
+    span
+        font-weight: bold
+        color: variables.$secondaryColor

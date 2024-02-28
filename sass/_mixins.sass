@@ -1,0 +1,48 @@
+@use 'variables'
+
+@mixin container
+    max-width: variables.$containerWidth
+    padding: 1.5rem 0
+    margin: 0 auto
+
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin bgImg($img)
+    background-image: url('../imgs/#{$img}')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    filter: grayscale(100%)
+    transition: .5s
+
+    &:hover
+        filter: grayscale(0%)
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../imgs/#{$img}')
+        transition: .5s
+
+@mixin Title
+    font-size: 38px
+    text-align: center
+    color: variables.$primaryColor
+    margin-bottom: 5%
+
+@mixin Input
+    width: 48%
+    padding: 10px
+    border: none
+    outline: none
+    background-color: transparent
+    border-bottom: 2px solid gray
+    color: variables.$primaryColor
+    font-size: 18px
+
+    &:hover
+        border-bottom: 2px solid variables.$secondaryColor
+
+ 
+@mixin mobile
+    @media(max-width: 550px)
+        @content

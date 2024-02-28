@@ -1,0 +1,437 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #111111;
+  color: #777;
+}
+body a {
+  color: #777;
+  text-decoration: none;
+  transition: 0.4s;
+}
+body ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+}
+@media (max-width: 550px) {
+  .header {
+    padding: 1.1rem;
+  }
+}
+.headerBrand {
+  color: #fff;
+  font-size: 3rem;
+}
+.headerBrand:hover {
+  color: #c92058;
+}
+.headerNavbar ul {
+  height: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .headerNavbar ul {
+    display: none;
+  }
+}
+.headerNavbar ul li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.headerNavbar ul li a:hover {
+  color: #c92058;
+  font-size: 18px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 550px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
+.galleryCard {
+  width: 31%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+@media (max-width: 550px) {
+  .galleryCard {
+    width: 90%;
+    margin-bottom: 6%;
+  }
+}
+.galleryCardTitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.galleryCardBtn {
+  padding: 0.6rem 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.galleryCardBtn:hover {
+  background-color: #fff;
+  color: #111111;
+}
+.gallery #card-1 {
+  background-image: url("../imgs/animais.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-1:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/animais.jpg");
+  transition: 0.5s;
+}
+.gallery #card-2 {
+  background-image: url("../imgs/arquitetura.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-2:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/arquitetura.png");
+  transition: 0.5s;
+}
+.gallery #card-3 {
+  background-image: url("../imgs/cidade.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-3:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/cidade.jpg");
+  transition: 0.5s;
+}
+.gallery #card-4 {
+  background-image: url("../imgs/decoracao.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-4:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/decoracao.webp");
+  transition: 0.5s;
+}
+.gallery #card-5 {
+  background-image: url("../imgs/esporte.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-5:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/esporte.jpg");
+  transition: 0.5s;
+}
+.gallery #card-6 {
+  background-image: url("../imgs/natureza.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-6:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/natureza.webp");
+  transition: 0.5s;
+}
+.gallery #card-7 {
+  background-image: url("../imgs/paisagem.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-7:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/paisagem.webp");
+  transition: 0.5s;
+}
+.gallery #card-8 {
+  background-image: url("../imgs/pessoas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-8:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/pessoas.jpg");
+  transition: 0.5s;
+}
+.gallery #card-9 {
+  background-image: url("../imgs/refeicoes.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.gallery #card-9:hover {
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/refeicoes.jpg");
+  transition: 0.5s;
+}
+
+.services {
+  max-width: 1200px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.servicesTitle {
+  font-size: 38px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 5%;
+}
+.servicesBoxWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.servicesBoxWrapper .servicesBox {
+  background: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 250px;
+  width: 380px;
+}
+.servicesBoxWrapper .servicesBoxNumber {
+  font-size: 40px;
+  color: #fff;
+}
+.servicesBoxWrapper .servicesBoxService {
+  font-size: 34px;
+  color: #c92058;
+}
+.servicesBoxWrapper .servicesBoxText {
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+.about {
+  max-width: 1200px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+}
+.aboutTitle {
+  font-size: 38px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 5%;
+}
+.aboutWrapper {
+  display: flex;
+  gap: 20px;
+}
+.aboutWrapper img {
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+}
+.aboutWrapper .aboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+.aboutWrapper .aboutUsFirstText {
+  font-size: 18px;
+}
+.aboutWrapper .aboutUsSecondText {
+  font-weight: bold;
+}
+.aboutWrapper .aboutUs h1 {
+  color: #fff;
+  font-size: 28px;
+}
+.aboutWrapper .aboutUsFeature {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.aboutWrapper .aboutUsFeatureContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+}
+.aboutWrapper .aboutUsFeatureContent h2 {
+  color: #c92058;
+}
+.aboutWrapper .aboutUsFeature i {
+  color: #c92058;
+}
+
+.contact {
+  max-width: 1200px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.contactTitle {
+  font-size: 38px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 5%;
+}
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 0 auto;
+}
+.contactBoxTitle {
+  font-size: 38px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 5%;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: gray;
+}
+.contactBoxForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.contactBoxFormIdentification {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contactBoxFormIdentification input {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid gray;
+  color: #fff;
+  font-size: 18px;
+}
+.contactBoxFormIdentification input:hover {
+  border-bottom: 2px solid #c92058;
+}
+.contactBoxFormText {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid gray;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+}
+.contactBoxFormText:hover {
+  border-bottom: 2px solid #c92058;
+}
+.contactBoxFormSocialMedias {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.contactBoxFormSocialMedias i {
+  transition: 0.4s;
+}
+.contactBoxFormSocialMedias i:hover {
+  color: #c92058;
+  transition: 0.4s;
+}
+.contactBoxFormSubmit {
+  padding: 10px 80px;
+  border: 2px solid #c92058;
+  color: #c92058;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.4s;
+}
+.contactBoxFormSubmit:hover {
+  background-color: #c92058;
+  color: #fff;
+  transition: 0.4s;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+footer span {
+  font-weight: bold;
+  color: #c92058;
+}
+
+/*# sourceMappingURL=styles.css.map */
