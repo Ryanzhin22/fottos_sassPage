@@ -13,7 +13,7 @@
 
 ## MIXINS
 -> Os mixins servem para criar "funções com comandos css" \ 
--> @mixin container -> max-width: variables.$containerWidth, padding: 1rem 0, margin: 0 auto \ 
+-> @mixin container -> max-width: variables.$containerWidth, padding: 1rem 0, margin: 0 auto    \ 
 -> Ao utilizar o comando acima no arquivo principal da seguinte forma: @include mixins.container, todos os arquivos com esse código terão os atributos acima \
 -> Também é possível criar um mixin para uma resolução específica para responsividade
 
